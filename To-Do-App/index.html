@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://upload.wikimedia.org/wikipedia/commons/6/67/Microsoft_To-Do_icon.png"
+    />
+
+    <title>Todo app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+	.iconss {
+	backdrop-filter: brightness(10);
+    	border-radius: 10px;
+    	width: 32px;
+	}
+    </style>
+    <link rel="stylesheet" href="./styles.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+  </head>
+  <body>
+    <header class="">
+      <h1>TODO</h1>
+      <button class="dark-theme" id="dark-theme-btn">
+        <img class="iconss" src="./images/110827_moon_icon.svg" alt="Change theme color" />
+      </button>
+      <button class="light-theme" id="light-theme-btn">
+        <img class="iconss" src="./images/110801_sun_icon.svg" alt="Change theme color" />
+      </button>
+    </header>
+
+    <main>
+      <div class="card add">
+        <div class="">
+          <button id="add-btn">
+            <i class="fas fa-plus" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="txt-container">
+          <input
+            type="text"
+            class=""
+            placeholder="Create a new todo..."
+            spellcheck="false"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <ul class="todos">
+  
+      </ul>
+      <div class="card stats">
+        <p class=""><span id="items-left">0</span> items left</p>
+        <div class="filter">
+          <button id="all" class="active">All</button>
+          <button id="active">Active</button>
+          <button id="completed">Completed</button>
+        </div>
+        <div class="corner">
+          <button id="clear">Clear Completed</button>
+        </div>
+      </div>
+      <div class="card m-filter">
+        <button id="m-all" class="active">All</button>
+        <button id="m-active">Active</button>
+        <button id="m-completed">Completed</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Drag and drop to reorder list</p>
+    </footer>
+    <div class="attribution">
+      Created by
+      <a href="https://linkedin.com/in/aansh-ojha" target="_blank">Aansh Ojha</a>. 
+      Coded by
+      <a href="https://github.com/AanshOjha" target="_blank">Aansh Ojha</a>.
+    </div>
+    <script src="toggleTheme.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
